@@ -1,0 +1,16 @@
+<?php require VIEWS_PATH . 'includes/header.phtml'; ?>
+    <div class="container " style="margin-top: 75px">
+
+        <div class="row">
+            <div class="col-6">
+                <img src="http://via.placeholder.com/600x350?text=<?= $this->product['name']; ?>" alt=""
+                     class="img-responsive">
+            </div>
+            <div class="col-6 text-center">
+                <h2><a href="<?= HOME; ?>/product/<?= $this->product['id']; ?>"><?= $this->product['name']; ?></a></h2>
+                <p><?= $this->product['description']; ?></p>
+                <p>R$ <?= number_format($this->product['price'], 2, ',', '.'); ?></p>
+            </div>
+        </div>
+    </div>
+<?php require VIEWS_PATH . 'includes/footer.phtml'; ?>
